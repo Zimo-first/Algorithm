@@ -1,33 +1,33 @@
-package com.atguigu.binarysearchnorecursion;
+package com.kailin.binarysearchnorecursion;
 
 public class BinarySearchNoRecur {
 
 	public static void main(String[] args) {
-		//²âÊÔ
+		//ï¿½ï¿½ï¿½ï¿½
 		int[] arr = {1,3, 8, 10, 11, 67, 100};
 		int index = binarySearch(arr, 100);
 		System.out.println("index=" + index);//
 	}
 	
-	//¶ş·Ö²éÕÒµÄ·Çµİ¹éÊµÏÖ
+	//ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ÒµÄ·Çµİ¹ï¿½Êµï¿½ï¿½
 	/**
 	 * 
-	 * @param arr ´ı²éÕÒµÄÊı×é, arrÊÇÉıĞòÅÅĞò
-	 * @param target ĞèÒª²éÕÒµÄÊı
-	 * @return ·µ»Ø¶ÔÓ¦ÏÂ±ê£¬-1±íÊ¾Ã»ÓĞÕÒµ½
+	 * @param arr ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½, arrï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param target ï¿½ï¿½Òªï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½ï¿½Ø¶ï¿½Ó¦ï¿½Â±ê£¬-1ï¿½ï¿½Ê¾Ã»ï¿½ï¿½ï¿½Òµï¿½
 	 */
 	public static int binarySearch(int[] arr, int target) {
 		
 		int left = 0;
 		int right = arr.length - 1;
-		while(left <= right) { //ËµÃ÷¼ÌĞø²éÕÒ
+		while(left <= right) { //Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			int mid = (left + right) / 2;
 			if(arr[mid] == target) {
 				return mid;
 			} else if ( arr[mid] > target) {
-				right = mid - 1;//ĞèÒªÏò×ó±ß²éÕÒ
+				right = mid - 1;//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ß²ï¿½ï¿½ï¿½
 			} else {
-				left = mid + 1; //ĞèÒªÏòÓÒ±ß²éÕÒ
+				left = mid + 1; //ï¿½ï¿½Òªï¿½ï¿½ï¿½Ò±ß²ï¿½ï¿½ï¿½
 			}
 		}
 		return -1;
